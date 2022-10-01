@@ -1,3 +1,7 @@
 var readLineSync = require('readline-sync');
+
+// read and enter username
 var userName = readLineSync.question("hello ");
-console.log("Welcome  ..   " + userName);
+var welcomeMsg = "welcomee  " + userName;
+
+console.log(welcomeMsg);

@@ -1,29 +1,22 @@
-// functions with userinput
-var readLineSync=require('readline-sync');
-var score=0;
-function userinput(question,answer){
-  var useranswer=readLineSync.question(question);
-  if(answer===useranswer){
-    console.log("your answer is correct")
-    score+=1;
-  }
-  else{
-     console.log("your answer is wrong")
-    score-=1;
-  }
+// array and for loops
+var fruits=["mango", "apple", "banana","pineapple", "pearl"]
+for(var i=0; i< fruits.length;i++){
+  console.log(fruits[i]);
 }
-var questionone="what is my name?? ";
-var answerone="kushulu";
-var questiontwo="what is my favourite dish?? ";
-var answertwo="biryani";
-userinput(questionone,answerone);
-userinput(questiontwo,answertwo);
 
-if(score>0){
-  console.log("your score is " + score);
-  console.log("keep scoring high ");
+//objects with key: value pair
+const superhero={
+  height:"6feet",
+  weight:"60kg",
+  power:"1000watts",
+  colour:"red"
 }
-else{
-  console.log("your score is " + score);
-  console.log("better luck next time ");
+
+const hulk={
+  height:"16feet",
+  weight:"360kg",
+  power:"100watts",
+  colour:"green"
 }
+console.log(superhero.height);
+console.log(superhero.height>hulk.height);

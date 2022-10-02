@@ -18,5 +18,9 @@ const hulk={
   power:"100watts",
   colour:"green"
 }
-console.log(superhero.height);
-console.log(superhero.height>hulk.height);
+var heros=[superhero, hulk];
+for(var i=0;i<heros.length;i++){
+  var currentHero=heros[i];
+  console.log(currentHero.height);
+  console.log(currentHero.colour);
+}

@@ -1,26 +1,37 @@
-// array and for loops
-var fruits=["mango", "apple", "banana","pineapple", "pearl"]
-for(var i=0; i< fruits.length;i++){
-  console.log(fruits[i]);
-}
+// final quiz
+var readLineSync=require('readline-sync');
+var userName=readLineSync.question("hello what is your name ?? ");
+console.log("WELCOME  "+ userName);
+var score=0;
+function userinput(question, answer) {
+  var userans=readLineSync.question(question);
+  if(userans===answer){
+    console.log("Right Answer");
+    score+=1;
+    
+  }
+  else{
+      console.log("Wrong Answer");
+    score-=1;
+  }}
 
-//objects with key: value pair
-const superhero={
-  height:"6feet",
-  weight:"60kg",
-  power:"1000watts",
-  colour:"red"
-}
-
-const hulk={
-  height:"16feet",
-  weight:"360kg",
-  power:"100watts",
-  colour:"green"
-}
-var heros=[superhero, hulk];
-for(var i=0;i<heros.length;i++){
-  var currentHero=heros[i];
-  console.log(currentHero.height);
-  console.log(currentHero.colour);
-}
+//array of objects 
+  const quiz=[{
+    question:"whta is my name ??",
+    answer:"kushulu"
+  },
+             {
+    question:"whta is my color ??",
+    answer:"white"
+  },
+              {
+    question:"whta is my weight ??",
+    answer: "60"
+  }
+             ];
+//traversing the array of objects
+  for (let index = 0; index < quiz.length; index++) {
+    var currques=quiz[index];
+    userinput(currques.question,currques.answer);
+  }
+  console.log("your final score is "+ score);
